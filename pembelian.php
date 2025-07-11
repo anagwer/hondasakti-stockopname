@@ -36,7 +36,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Nota</th>
                     <th scope="col">Tanggal</th>
-                    <th scope="col">Total</th>
+                    <th scope="col">Total Barang Masuk</th>
                     <th scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -53,7 +53,7 @@
                     <th scope="row"><?php echo $no; $no++;?></th>
                     <td><?php echo $row['no_nota'];?></td>
                     <td><?php echo $row['tgl'];?></td>
-                    <td><?php echo 'Rp. '.number_format($row['total'], 0, ",", ".");?></td>
+                    <td><?php echo $row['total'];?></td>
                     <td style="text-align:center">
 												<a href="detail_beli.php?id_beli=<?php echo $row['id_beli']?>" class="btn btn-success btn-outline"><i class="bi bi-pencil-square"></i> </a>
                         <a rel="tooltip"  title="Delete" id="<?php echo $row['id_beli'] ?>" href="#delete_pembelian<?php echo $row['id_beli'];?>"  data-toggle="modal"class="btn btn-danger btn-outline"><i class="bi bi-trash-fill"></i> </a>		

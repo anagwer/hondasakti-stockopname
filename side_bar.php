@@ -91,7 +91,7 @@ echo $indonesianDate;
             <ul id="tables-nav" class="nav-content collapse <?php echo in_array($current_page, ['pembelian.php', 'penjualan.php']) ? 'show' : ''; ?>" data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="pembelian.php" class="<?php echo $current_page == 'pembelian.php' ? 'active' : ''; ?>">
-                        <span>Pembelian</span>
+                        <span>Masuk</span>
                     </a>
                 </li>
                 <li>

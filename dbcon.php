@@ -1,5 +1,5 @@
 <?php
-	$conn = new mysqli('localhost', 'root', '', 'db_honda_sakti');
+	$conn = new mysqli('localhost', 'root', '', 'db_hondasakti');
 	
 	if(!$conn){
 		die("Error: Failed to connect to database");
@@ -11,7 +11,7 @@
 $hostname = "localhost"; 
 $username = "root"; 
 $password = ""; 
-$dbname   = "db_honda_sakti";
+$dbname   = "db_hondasakti";
  
 // Create database connection 
 $con = new mysqli($hostname, $username, $password, $dbname); 

@@ -24,6 +24,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Tanggal</th>
                     <th scope="col">Nama</th>
+                    <th scope="col">Deskripsi</th>
                     <th scope="col">Stok</th>
                     <th scope="col">Harga Jual</th>
                     <th scope="col">Aksi</th>
@@ -42,6 +43,7 @@
                     <th scope="row"><?php echo $no; $no++;?></th>
                     <td><?php echo $row['tgl'];?></td>
                     <td><?php echo $row['nm_barang'];?></td>
+                    <td><?php echo $row['deskripsi'];?></td>
                     <td><?php echo $row['stok'];?></td>
                     <td><?php echo 'Rp. '.number_format($row['hrg_jual'], 0, ",", ".");?></td>
                     <td style="text-align:center">
