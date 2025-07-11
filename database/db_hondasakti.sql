@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2025 at 07:06 PM
+-- Generation Time: Jul 11, 2025 at 06:14 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_honda_sakti`
+-- Database: `db_hondasakti`
 --
 
 -- --------------------------------------------------------
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `barang` (
   `id_barang` int(11) NOT NULL,
   `nm_barang` varchar(100) NOT NULL,
+  `deskripsi` text NOT NULL,
   `stok` int(11) NOT NULL,
   `hrg_beli` int(20) NOT NULL,
   `hrg_jual` int(20) NOT NULL,
@@ -40,9 +41,9 @@ CREATE TABLE `barang` (
 -- Dumping data for table `barang`
 --
 
-INSERT INTO `barang` (`id_barang`, `nm_barang`, `stok`, `hrg_beli`, `hrg_jual`, `tgl`) VALUES
-(1, 'Beras 5 kg', 25, 67000, 70000, '2024-05-21 08:42:57'),
-(2, 'Minyak 1 Liter', 9, 80000, 40000, '2024-05-29 20:31:55');
+INSERT INTO `barang` (`id_barang`, `nm_barang`, `deskripsi`, `stok`, `hrg_beli`, `hrg_jual`, `tgl`) VALUES
+(1, 'PCX 160 CBS', '<p>Fitur-fitur unggulan pada Honda PCX antara lain lampu LED, panel instrumen digital, USB charger, dan sistem pengereman ABS pada varian tertentu.<span class=\"pjBG2e\" data-cid=\"d6d707aa-4e83-4d69-95c8-b1af3fe9348e\"><span class=\"UV3uM\">&nbsp;</span></span></p>\r\n<ol>\r\n<li>Gratis Jacket</li>\r\n</ol>', 30, 67000, 34580000, '2024-05-21 08:42:57'),
+(2, 'Honda Supra GTR 150', '<p>Motor bebek sport dengan performa tinggi.<span class=\"pjBG2e\" data-cid=\"ce231a83-28ba-425b-ae3c-f562679dbcec\"><span class=\"UV3uM\">&nbsp;</span></span></p>\r\n<ol>\r\n<li><span class=\"pjBG2e\" data-cid=\"ce231a83-28ba-425b-ae3c-f562679dbcec\">Gratis Helm</span></li>\r\n</ol>', 15, 80000, 26898000, '2024-05-29 20:31:55');
 
 -- --------------------------------------------------------
 
@@ -64,11 +65,8 @@ CREATE TABLE `detailbeli` (
 --
 
 INSERT INTO `detailbeli` (`id_detailbeli`, `no_nota`, `id_beli`, `id_barang`, `jml_beli`, `hrg_beli`) VALUES
-(6, '1', 1, 1, 2, 65000),
-(7, '1', 1, 2, 3, 38000),
-(12, 'A23', 2, 2, 2, 80000),
-(20, '-', 3, 2, 6, 56000),
-(22, '-', 3, 1, 5, 56000),
+(20, 'gt5', 3, 2, 6, 56000),
+(22, 'gt5', 3, 1, 5, 56000),
 (23, '-', 5, 2, 1, 7000);
 
 -- --------------------------------------------------------
@@ -116,9 +114,7 @@ CREATE TABLE `pembelian` (
 --
 
 INSERT INTO `pembelian` (`id_beli`, `no_nota`, `tgl`, `total`) VALUES
-(1, 'N1', '2024-06-03 00:35:39', 244000),
-(2, 'A23', '2024-06-26 00:19:06', 160000),
-(3, '-', '2024-06-27 13:49:13', 0),
+(3, 'gt5', '2024-06-27 13:49:13', 11),
 (4, '-', '2025-07-10 16:41:27', 0),
 (5, '-', '2025-07-10 16:44:12', 0);
 
